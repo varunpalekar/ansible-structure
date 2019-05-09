@@ -3,7 +3,7 @@
 - hosts: api
   vars_files: 
     - "vars/{{ env }}.yml"
-  tasks: 
+  tasks:
     - name: install tomcat
       apt: 
         name: tomcat8

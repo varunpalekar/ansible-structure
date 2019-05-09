@@ -28,4 +28,4 @@ ENV JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true -Djava.security.egd=file:/dev
 ENV CATALINA_OPTS="$CATALINA_OPTS -XX:+UseParallelGC -verbosegc -Xloggc:/var/log/tomcat/gc.log -Xms192M -Xmx384M "
 
 EXPOSE 8180
-CMD ["catalina.sh", "run"]
+CMD ["run.sh"]
