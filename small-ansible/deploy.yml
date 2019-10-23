@@ -2,6 +2,8 @@
 
 - hosts: 
   - tomcat
+  vars_files: 
+    - "vars/{{ env }}.yml"
   roles:
     - base
     - tomcat
