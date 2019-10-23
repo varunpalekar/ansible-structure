@@ -1,0 +1,5 @@
+---
+# tasks file for base
+
+- include: hosts.yml
+- include: selinux.yml

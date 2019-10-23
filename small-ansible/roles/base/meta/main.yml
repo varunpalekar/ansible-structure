@@ -1,0 +1,10 @@
+galaxy_info:
+  author: Varun Palekar
+  description: base role for oracle 7
+  company: Accommodations Plus International
+
+  min_ansible_version: 2.4
+
+  galaxy_tags: []
+
+dependencies: []
