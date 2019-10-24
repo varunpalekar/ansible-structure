@@ -1,0 +1,4 @@
+---
+# defaults file for tomcat
+tomcat_package_name: tomcat8
+tomcat_service_name: tomcat8

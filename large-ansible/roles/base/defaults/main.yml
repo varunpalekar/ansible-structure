@@ -1,0 +1,69 @@
+---
+# defaults file for base
+
+base_default_ethernet: eth0
+
+base_yum_repo_oracle_7:
+  ol7_optional_latest:
+    description: Oracle Linux $releasever Optional Latest ($basearch)
+    baseurl: https://yum.oracle.com/repo/OracleLinux/OL7/optional/latest/$basearch/
+    gpgcheck: yes
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+    enabled: yes
+    file: oracle-linux-ol7    
+  ol7_developer_EPEL:
+    description: Oracle Linux $releasever Development Packages ($basearch)
+    baseurl: https://yum.oracle.com/repo/OracleLinux/OL7/developer_EPEL/$basearch/
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
+    gpgcheck: yes
+    enabled: yes
+    file: oracle-epel-ol7
+
+base_yum_repo_oracle_6:
+  epel:
+    description: Extra Packages for Enterprise Linux 6 - $basearch
+    baseurl: http://download.fedoraproject.org/pub/epel/6/$basearch
+    mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch
+    failovermethod: priority
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6
+    file: oracle-epel-ol6
+  epel-debuginfo:
+    description: Extra Packages for Enterprise Linux 6 - $basearch - Debug
+    baseurl: http://download.fedoraproject.org/pub/epel/6/$basearch/debug
+    mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=epel-debug-6&arch=$basearch
+    failovermethod: priority
+    enabled: no
+    gpgcheck: yes
+    gpgkey: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6
+    file: oracle-epel-ol6
+  epel-source:
+    description: Extra Packages for Enterprise Linux 6 - $basearch - Source
+    baseurl: http://download.fedoraproject.org/pub/epel/6/SRPMS
+    mirrorlist: https://mirrors.fedoraproject.org/metalink?repo=epel-source-6&arch=$basearch
+    failovermethod: priority
+    enabled: no
+    gpgcheck: yes
+    gpgkey: https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6
+    file: oracle-epel-ol6
+  
+base_yum_repo_centos:
+  epel:
+    description: Centos Linux $releasever Development Packages ($basearch)
+    baseurl: "https://dl.fedoraproject.org/pub/epel/7/$basearch/"
+    gpgkey: "https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7"
+    gpgcheck: yes
+    enabled: yes
+
+base_packages_7:      #  Base packages for linux 7
+  - htop
+  - bash-completion
+  - unzip
+base_packages_6:      #  Base packages for linux 6
+  - unzip
+  - libselinux-python
+
+base_selinux_restore_contexts: 
+  - /home
+  

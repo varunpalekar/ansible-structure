@@ -1,0 +1,13 @@
+---
+# tasks file for tomcat
+
+- name: install tomcat package
+  package:
+    name: "{{ tomcat_package_name }}"
+    state: present
+
+- name: start and enable tomcat service
+  service:
+    name: tomcat8
+    enabled: yes
+    state: started

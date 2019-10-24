@@ -1,0 +1,7 @@
+---
+
+- name: Put SELinux in enforcing mode
+  selinux:
+    policy: targeted
+    state: enforcing
+  when: ansible_selinux != false
