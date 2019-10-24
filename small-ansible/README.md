@@ -37,3 +37,8 @@ Limitations of using above ansible folder structure
 ---------------------------------------------------
 
 1. This folder structure not able to handle complex scenario in which we need to declare separate group_vars according to environment also. This is very special requirement which needed in large and complex infrastructure.
+
+Author
+------
+
+[Varun Palekar](https://github.com/varunpalekar)

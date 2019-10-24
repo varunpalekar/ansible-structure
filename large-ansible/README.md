@@ -43,3 +43,8 @@ Limitations of using above ansible folder structure
 ---------------------------------------------------
 
 1. Need to handle more files
+
+Author
+------
+
+[Varun Palekar](https://github.com/varunpalekar)
