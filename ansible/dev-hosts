@@ -1,5 +1,0 @@
-[api]
-server1 ansible_user=ubuntu
-
-[api:vars]
-env=dev

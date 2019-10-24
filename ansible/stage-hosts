@@ -1,5 +1,0 @@
-[api]
-server2 ansible_user=ubuntu
-
-[api:vars]
-env=stage

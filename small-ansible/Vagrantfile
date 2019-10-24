@@ -78,7 +78,7 @@ Vagrant.configure("2") do |config|
         export ANSIBLE_NOCOWS=1
         mkdir -p /vagrant/#{$log_folder}
         ansible-galaxy install -r requirements.yml
-        ansible-playbook -i inventories/vagrant/hosts.ini #{$playbook} #{$other_args}
+        ansible-playbook -i dev-hosts.ini #{$playbook} #{$other_args}
       EOF
 
       controller.vm.provider "virtualbox" do |v|
